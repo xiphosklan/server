@@ -1,0 +1,93 @@
+/* Reset everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; /* Pitch black */
+    color: #d0d0d0; /* Off-white so it's not blinding */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Cold, clean font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* The Lambda Symbol */
+.symbol {
+    font-size: 120px;
+    font-weight: 900;
+    color: #b30000; /* Blood red */
+    line-height: 1;
+    margin-bottom: 10px;
+    /* Adds a subtle, harsh text shadow for depth */
+    text-shadow: 2px 2px 0px #500000; 
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 6px; /* Forces wide, authoritarian spacing */
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #b30000;
+    margin-bottom: 40px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: #333333;
+    margin: 0 auto 40px auto;
+}
+
+.doctrine {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #888888; /* Muted grey so the button stands out */
+    margin-bottom: 50px;
+}
+
+/* The Button */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    /* 0 border radius keeps it sharp and brutalist */
+    border-radius: 0px; 
+}
+
+/* What happens when you hover over the button */
+.btn:hover {
+    background-color: #b30000;
+    border-color: #b30000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 11px;
+    color: #333333;
+    letter-spacing: 2px;
+}
