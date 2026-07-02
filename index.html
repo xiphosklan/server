@@ -27,17 +27,6 @@
         </a>
     </div>
 
-    <!-- SYSTEM STATUS SECTION -->
-    <div class="container terminal-box">
-        <p class="terminal-header">SYSTEM STATUS // NODE: xK-PRIMARY</p>
-        <div class="terminal-stats">
-            <p>ENCLAVE STATUS: <span class="status-active">OPERATIONAL</span></p>
-            <p>ACTIVE OPERATIVES: <span class="status-num">24</span></p>
-            <p>SECTOR THREAT LEVEL: <span class="status-low">LOW</span></p>
-            <p>COMMS PROTOCOL: <span class="status-active">SECURE</span></p>
-        </div>
-    </div>
-
     <!-- CHAIN OF COMMAND SECTION -->
     <div class="container">
         <h2 class="section-title">CHAIN OF COMMAND</h2>
@@ -56,12 +45,24 @@
     <div class="container">
         <h2 class="section-title">PROPAGANDA VAULT</h2>
         <div class="vault-grid">
-            <!-- REPLACE THESE WITH YOUR ACTUAL IMAGE FILE NAMES -->
-            <img src="poster1.jpg" alt="Propaganda" class="vault-img">
-            <img src="poster2.jpg" alt="Propaganda" class="vault-img">
-            <img src="poster3.jpg" alt="Propaganda" class="vault-img">
-            <!-- Add more <img> tags here if you make more posters -->
+            <a href="#img1" class="vault-link"><img src="poster1.jpg" alt="Propaganda" class="vault-img"></a>
+            <a href="#img2" class="vault-link"><img src="poster2.jpg" alt="Propaganda" class="vault-img"></a>
+            <a href="#img3" class="vault-link"><img src="poster3.jpg" alt="Propaganda" class="vault-img"></a>
         </div>
+    </div>
+
+    <!-- LIGHTBOX OVERLAYS -->
+    <div class="lightbox" id="img1">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster1.jpg" alt="Full Poster">
+    </div>
+    <div class="lightbox" id="img2">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster2.jpg" alt="Full Poster">
+    </div>
+    <div class="lightbox" id="img3">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster3.jpg" alt="Full Poster">
     </div>
 
     <footer>xiphosklan.github.io</footer>
