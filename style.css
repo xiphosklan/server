@@ -1,4 +1,3 @@
-/* Reset everything */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +5,9 @@
 }
 
 body {
-    background-color: #0a0a0a; /* Pitch black */
-    color: #d0d0d0; /* Off-white so it's not blinding */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Cold, clean font */
+    background-color: #000000; /* Changed to absolute solid black */
+    color: #d0d0d0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,19 +20,17 @@ body {
     max-width: 600px;
 }
 
-/* The Lambda Image */
 .symbol {
-    width: 150px; /* CHANGE THIS NUMBER to make the logo bigger or smaller (e.g., 200px or 100px) */
+    width: 150px; 
     height: auto;
     margin-bottom: 10px;
-    /* This replaces the text shadow with an image shadow */
     filter: drop-shadow(2px 2px 0px #500000); 
 }
 
 h1 {
     font-size: 28px;
     font-weight: 700;
-    letter-spacing: 6px; /* Forces wide, authoritarian spacing */
+    letter-spacing: 6px;
     color: #ffffff;
     margin-bottom: 10px;
 }
@@ -55,11 +52,10 @@ h1 {
 .doctrine {
     font-size: 15px;
     line-height: 1.6;
-    color: #888888; /* Muted grey so the button stands out */
+    color: #888888; 
     margin-bottom: 50px;
 }
 
-/* The Button */
 .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -71,11 +67,9 @@ h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
     transition: all 0.2s ease;
-    /* 0 border radius keeps it sharp and brutalist */
     border-radius: 0px; 
 }
 
-/* What happens when you hover over the button */
 .btn:hover {
     background-color: #b30000;
     border-color: #b30000;
