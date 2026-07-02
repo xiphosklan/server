@@ -21,15 +21,13 @@ body {
     max-width: 600px;
 }
 
-/* The Lambda Symbol */
+/* The Lambda Image */
 .symbol {
-    font-size: 120px;
-    font-weight: 900;
-    color: #b30000; /* Blood red */
-    line-height: 1;
+    width: 150px; /* CHANGE THIS NUMBER to make the logo bigger or smaller (e.g., 200px or 100px) */
+    height: auto;
     margin-bottom: 10px;
-    /* Adds a subtle, harsh text shadow for depth */
-    text-shadow: 2px 2px 0px #500000; 
+    /* This replaces the text shadow with an image shadow */
+    filter: drop-shadow(2px 2px 0px #500000); 
 }
 
 h1 {
