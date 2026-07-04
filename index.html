@@ -10,15 +10,19 @@
 
     <div class="grid-layout">
         
-        <!-- LEFT SIDE IMAGE -->
         <div class="sidebar sidebar-left">
-            <!-- REPLACE WITH YOUR IMAGE FILE NAME -->
             <img src="left-image.jpg" alt="Left Propaganda">
             <div class="red-overlay"></div>
         </div>
 
-        <!-- MAIN CENTER CONTENT -->
         <div class="main-content">
+            
+            <nav class="nav-bar">
+                <a href="index.html" class="nav-link">GATEWAY</a>
+                <a href="doctrine.html" class="nav-link">DOCTRINE</a>
+                <a href="targets.html" class="nav-link">TARGETS</a>
+                <a href="archive.html" class="nav-link">ARCHIVE</a>
+            </nav>
 
             <div class="container">
                 <img src="lambda.png" alt="xK Lambda" class="symbol">
@@ -36,56 +40,36 @@
                 <a href="https://discord.gg/Daq5gaZKcW" target="_blank" class="btn">
                     ENTER THE GATES
                 </a>
+                
+                <a href="archive.html" class="btn-secondary">
+                    PROPAGANDA VAULT
+                </a>
             </div>
 
             <div class="container">
                 <h2 class="section-title">CHAIN OF COMMAND</h2>
                 <div class="hierarchy">
-                    <div class="rank">THE IMPERATOR</div>
+                    <a href="imperator.html" class="rank-link">THE IMPERATOR</a>
                     <div class="connector"></div>
-                    <div class="rank">THE PRAETORIAN KORP</div>
+                    <a href="praetorian.html" class="rank-link">THE PRAETORIAN KORP</a>
                     <div class="connector"></div>
-                    <div class="rank">CENTURIONS</div>
+                    <a href="centurions.html" class="rank-link">CENTURIONS</a>
                     <div class="connector"></div>
-                    <div class="rank current-rank">THE PHALANX <span class="you-tag">[ YOU ARE HERE ]</span></div>
-                </div>
-            </div>
-
-            <div class="container">
-                <h2 class="section-title">PROPAGANDA VAULT</h2>
-                <div class="vault-grid">
-                    <a href="#img1" class="vault-link"><img src="poster1.jpg" alt="Propaganda" class="vault-img"></a>
-                    <a href="#img2" class="vault-link"><img src="poster2.jpg" alt="Propaganda" class="vault-img"></a>
-                    <a href="#img3" class="vault-link"><img src="poster3.jpg" alt="Propaganda" class="vault-img"></a>
+                    <a href="phalanx.html" class="rank-link">THE PHALANX</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE IMAGE -->
         <div class="sidebar sidebar-right">
-            <!-- REPLACE WITH YOUR IMAGE FILE NAME -->
             <img src="right-image.jpg" alt="Right Propaganda">
             <div class="red-overlay"></div>
         </div>
 
     </div>
 
-    <!-- LIGHTBOX OVERLAYS (Keep outside the grid so they cover the whole screen) -->
-    <div class="lightbox" id="img1">
-        <a href="#!" class="close-btn">CLOSE</a>
-        <img src="poster1.jpg" alt="Full Poster">
-    </div>
-    <div class="lightbox" id="img2">
-        <a href="#!" class="close-btn">CLOSE</a>
-        <img src="poster2.jpg" alt="Full Poster">
-    </div>
-    <div class="lightbox" id="img3">
-        <a href="#!" class="close-btn">CLOSE</a>
-        <img src="poster3.jpg" alt="Full Poster">
-    </div>
-
     <footer>xiphosklan.github.io</footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
