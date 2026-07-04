@@ -8,19 +8,63 @@ body {
     background-color: #000000; 
     color: #d0d0d0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Removed the center padding, the grid handles it now */
+}
+
+/* --- 3-COLUMN GRID LAYOUT --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr; /* Left side / Center Content / Right side */
     min-height: 100vh;
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
 }
 
+.main-content {
+    border-left: 1px solid #111111;
+    border-right: 1px solid #111111;
+    padding: 80px 0;
+}
+
+/* --- STICKY SIDEBAR IMAGES --- */
+.sidebar {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Hides the part of the image that overflows */
+}
+
+.sidebar img {
+    /* absolute positioning + object-fit makes the image fill the tall column */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Makes the image slightly transparent and black/white */
+    filter: grayscale(100%) opacity(0.4);
+    /* Freezes the image in place while the center text scrolls */
+    position: sticky;
+    top: 0;
+}
+
+/* The blood-red tint that sits over the side images */
+.red-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(179, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none; /* Lets you click through it if needed */
+}
+
+
+/* --- MAIN CENTER CONTENT (Largely Unchanged) --- */
 .container {
-    padding: 20px;
-    max-width: 600px;
+    padding: 20px 40px;
     margin: 0 auto 100px auto; 
+    max-width: 100%;
 }
 
-/* --- HOME SECTION --- */
 .symbol {
     width: 150px; 
     height: auto;
@@ -78,7 +122,7 @@ h1 {
     cursor: pointer;
 }
 
-/* --- CHAIN OF COMMAND SECTION --- */
+/* --- CHAIN OF COMMAND --- */
 .section-title {
     font-size: 16px;
     letter-spacing: 5px;
@@ -123,7 +167,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* --- PROPAGANDA VAULT SECTION --- */
+/* --- PROPAGANDA VAULT --- */
 .vault-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,7 +193,7 @@ h1 {
     cursor: pointer;
 }
 
-/* --- LIGHTBOX FULLSCREEN OVERLAY --- */
+/* --- LIGHTBOX --- */
 .lightbox {
     display: flex;
     justify-content: center;
@@ -196,4 +240,21 @@ footer {
     font-size: 11px;
     color: #222222;
     letter-spacing: 2px;
+    text-align: center;
+    grid-column: 1 / -1; /* Spans across all 3 columns at the bottom */
+    padding-bottom: 40px;
+}
+
+/* --- MOBILE PHONE BREAKPOINT --- */
+/* If the screen is smaller than 900px, destroy the side images */
+@media (max-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* Stacks everything into 1 column */
+    }
+    .sidebar {
+        display: none; /* Hides the side images completely on phones */
+    }
+    .main-content {
+        border: none;
+    }
 }
