@@ -10,54 +10,44 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Changed to 2 columns to remove right side */
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 600px;
-    min-height: 100vh;
-}
-
-.main-content {
-    border-right: 1px solid #111111;
-    padding: 80px 0;
-}
-
-/* --- STICKY SIDEBAR --- */
-.sidebar {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.sidebar img {
-    position: absolute;
+/* --- FIXED BACKGROUND IMAGE --- */
+.fixed-bg-image {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: sticky;
-    top: 0;
+    height: 100vh; /* Forces it to fit the screen height without cropping */
+    width: auto; /* Maintains aspect ratio so it doesn't stretch */
+    max-width: 50vw; /* Prevents it from covering more than half the screen */
+    object-fit: contain;
+    z-index: 1; /* Puts it behind the text */
+    filter: grayscale(100%);
+    pointer-events: none; /* Allows clicks to pass through it to the text/links below */
 }
 
-/* RED OVERLAY COMPLETELY REMOVED */
-
-/* Forces the right sidebar to not display */
-.sidebar-right {
-    display: none;
+/* --- CENTERED TEXT LAYER --- */
+.main-content {
+    position: relative;
+    z-index: 10; /* Forces it above the background image */
+    max-width: 600px;
+    margin: 0 auto; /* Dead center of the page */
+    padding: 40px;
+    min-height: 100vh;
+    
+    /* Heavy black shadow ensures text is readable when overlapping the photo */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 /* --- NAVIGATION --- */
 .nav-bar {
-    grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     gap: 40px;
     padding: 20px 0;
-    border-bottom: 1px solid #111111;
-    background-color: #000000;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 40px;
     position: sticky;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black so image blurs out behind nav */
     z-index: 100;
 }
 
@@ -76,7 +66,7 @@ body {
 
 /* --- MAIN CONTENT --- */
 .container {
-    padding: 20px 40px;
+    padding: 20px 0;
     margin: 0 auto 100px auto; 
     max-width: 100%;
 }
@@ -139,6 +129,7 @@ h1 {
     transition: all 0.2s ease;
     border-radius: 0px; 
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Slight black background so button doesn't get lost over image */
 }
 
 .btn:hover {
@@ -163,6 +154,7 @@ h1 {
     transition: all 0.2s ease;
     border-radius: 0px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn-secondary:hover {
@@ -204,11 +196,24 @@ h1 {
     display: block;
     text-align: center;
     transition: all 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.8); /* Keeps rank links readable over image */
 }
 
 .rank-link:hover {
     color: #b30000;
     border-color: #b30000;
+}
+
+/* --- DISCLAIMER --- */
+.disclaimer {
+    font-size: 10px;
+    color: #333333; /* Very dark grey so it's there if you look for it, but doesn't ruin the vibe */
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    line-height: 1.6;
 }
 
 /* --- DOCTRINE PAGE --- */
@@ -347,20 +352,17 @@ h1 {
 
 /* --- FOOTER --- */
 footer {
-    margin-top: 40px;
     font-size: 11px;
     color: #222222;
     letter-spacing: 2px;
     text-align: center;
-    grid-column: 1 / -1; 
     padding-bottom: 40px;
 }
 
 /* --- MOBILE --- */
 @media (max-width: 900px) {
-    .grid-layout { grid-template-columns: 1fr; }
-    .sidebar { display: none; }
-    .main-content { border: none; }
+    .fixed-bg-image { display: none; } /* Hides image completely on phones */
+    .main-content { text-shadow: none; } /* Removes shadow when image isn't there */
     .rank-grid { grid-template-columns: 1fr; }
     .vault-grid { grid-template-columns: 1fr; }
 }
