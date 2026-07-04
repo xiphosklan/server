@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xK // Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="grid-layout">
+        
+        <!-- LEFT SIDE IMAGE -->
+        <div class="sidebar sidebar-left">
+            <img src="left-image.jpg" alt="Left Propaganda">
+            <div class="red-overlay"></div>
+        </div>
+
+        <!-- MAIN CENTER CONTENT -->
+        <div class="main-content">
+            
+            <!-- NAVIGATION -->
+            <nav class="nav-bar">
+                <a href="index.html" class="nav-link">GATEWAY</a>
+                <a href="doctrine.html" class="nav-link">DOCTRINE</a>
+                <a href="targets.html" class="nav-link">TARGETS</a>
+                <a href="archive.html" class="nav-link">ARCHIVE</a>
+            </nav>
+
+            <!-- ARCHIVE PAGE CONTENT -->
+            <div class="container" style="margin-top: 40px;">
+                <h2 class="section-title">PROPAGANDA VAULT</h2>
+                <div class="divider" style="margin-bottom: 40px;"></div>
+                
+                <div class="vault-grid">
+                    <!-- Remember to change these file names to your actual poster names -->
+                    <a href="#img1" class="vault-link"><img src="poster1.jpg" alt="Propaganda" class="vault-img"></a>
+                    <a href="#img2" class="vault-link"><img src="poster2.jpg" alt="Propaganda" class="vault-img"></a>
+                    <a href="#img3" class="vault-link"><img src="poster3.jpg" alt="Propaganda" class="vault-img"></a>
+                    <!-- You can copy and paste more of these lines as you make more posters -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="sidebar sidebar-right">
+            <img src="right-image.jpg" alt="Right Propaganda">
+            <div class="red-overlay"></div>
+        </div>
+
+    </div>
+
+    <!-- LIGHTBOX OVERLAYS -->
+    <!-- These allow the images to open full screen without downloading -->
+    <div class="lightbox" id="img1">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster1.jpg" alt="Full Poster">
+    </div>
+    <div class="lightbox" id="img2">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster2.jpg" alt="Full Poster">
+    </div>
+    <div class="lightbox" id="img3">
+        <a href="#!" class="close-btn">CLOSE</a>
+        <img src="poster3.jpg" alt="Full Poster">
+    </div>
+
+    <footer>xiphosklan.github.io</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
