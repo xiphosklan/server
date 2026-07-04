@@ -244,6 +244,39 @@ footer {
     grid-column: 1 / -1; /* Spans across all 3 columns at the bottom */
     padding-bottom: 40px;
 }
+/* --- NAVIGATION BAR --- */
+.nav-bar {
+    grid-column: 1 / -1; /* Forces the nav to span across all 3 columns */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #111111;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keeps it on top of the side images */
+}
+
+.nav-link {
+    color: #444444;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #b30000;
+}
+
+/* Ensure the 3-column grid spans the full height of the screen now */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    min-height: 100vh;
+}
 
 /* --- MOBILE PHONE BREAKPOINT --- */
 /* If the screen is smaller than 900px, destroy the side images */
