@@ -8,50 +8,70 @@
 </head>
 <body>
 
-    <!-- HOME / GATEWAY SECTION -->
-    <div class="container">
-        <img src="lambda.png" alt="xK Lambda" class="symbol">
-        <h1>THE XIPHOS KRYPTEIA</h1>
-        <p class="subtext">STRUCTURE. DISCIPLINE. ORDER.</p>
+    <div class="grid-layout">
         
-        <div class="divider"></div>
-        
-        <p class="doctrine">
-            A centralized command structure built for organized warfare. 
-            We accept those who value discipline over chaos. 
-            Verify your clearance to proceed.
-        </p>
-
-        <a href="https://discord.gg/Daq5gaZKcW" target="_blank" class="btn">
-            ENTER THE GATES
-        </a>
-    </div>
-
-    <!-- CHAIN OF COMMAND SECTION -->
-    <div class="container">
-        <h2 class="section-title">CHAIN OF COMMAND</h2>
-        <div class="hierarchy">
-            <div class="rank">THE IMPERATOR</div>
-            <div class="connector"></div>
-            <div class="rank">THE PRAETORIAN KORP</div>
-            <div class="connector"></div>
-            <div class="rank">CENTURIONS</div>
-            <div class="connector"></div>
-            <div class="rank current-rank">THE PHALANX <span class="you-tag">[ YOU ARE HERE ]</span></div>
+        <!-- LEFT SIDE IMAGE -->
+        <div class="sidebar sidebar-left">
+            <!-- REPLACE WITH YOUR IMAGE FILE NAME -->
+            <img src="left-image.jpg" alt="Left Propaganda">
+            <div class="red-overlay"></div>
         </div>
-    </div>
 
-    <!-- PROPAGANDA VAULT SECTION -->
-    <div class="container">
-        <h2 class="section-title">PROPAGANDA VAULT</h2>
-        <div class="vault-grid">
-            <a href="#img1" class="vault-link"><img src="poster1.jpg" alt="Propaganda" class="vault-img"></a>
-            <a href="#img2" class="vault-link"><img src="poster2.jpg" alt="Propaganda" class="vault-img"></a>
-            <a href="#img3" class="vault-link"><img src="poster3.jpg" alt="Propaganda" class="vault-img"></a>
+        <!-- MAIN CENTER CONTENT -->
+        <div class="main-content">
+
+            <div class="container">
+                <img src="lambda.png" alt="xK Lambda" class="symbol">
+                <h1>THE XIPHOS KRYPTEIA</h1>
+                <p class="subtext">STRUCTURE. DISCIPLINE. ORDER.</p>
+                
+                <div class="divider"></div>
+                
+                <p class="doctrine">
+                    A centralized command structure built for organized warfare. 
+                    We accept those who value discipline over chaos. 
+                    Verify your clearance to proceed.
+                </p>
+
+                <a href="https://discord.gg/Daq5gaZKcW" target="_blank" class="btn">
+                    ENTER THE GATES
+                </a>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title">CHAIN OF COMMAND</h2>
+                <div class="hierarchy">
+                    <div class="rank">THE IMPERATOR</div>
+                    <div class="connector"></div>
+                    <div class="rank">THE PRAETORIAN KORP</div>
+                    <div class="connector"></div>
+                    <div class="rank">CENTURIONS</div>
+                    <div class="connector"></div>
+                    <div class="rank current-rank">THE PHALANX <span class="you-tag">[ YOU ARE HERE ]</span></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title">PROPAGANDA VAULT</h2>
+                <div class="vault-grid">
+                    <a href="#img1" class="vault-link"><img src="poster1.jpg" alt="Propaganda" class="vault-img"></a>
+                    <a href="#img2" class="vault-link"><img src="poster2.jpg" alt="Propaganda" class="vault-img"></a>
+                    <a href="#img3" class="vault-link"><img src="poster3.jpg" alt="Propaganda" class="vault-img"></a>
+                </div>
+            </div>
+
         </div>
+
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="sidebar sidebar-right">
+            <!-- REPLACE WITH YOUR IMAGE FILE NAME -->
+            <img src="right-image.jpg" alt="Right Propaganda">
+            <div class="red-overlay"></div>
+        </div>
+
     </div>
 
-    <!-- LIGHTBOX OVERLAYS -->
+    <!-- LIGHTBOX OVERLAYS (Keep outside the grid so they cover the whole screen) -->
     <div class="lightbox" id="img1">
         <a href="#!" class="close-btn">CLOSE</a>
         <img src="poster1.jpg" alt="Full Poster">
